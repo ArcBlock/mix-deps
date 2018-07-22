@@ -1,0 +1,16 @@
+language: elixir
+elixir:
+  - 1.6
+otp_release:
+  - 21
+branches:
+  only:
+    - master
+install:
+  - epmd -daemon
+  - mix local.hex --force
+  - mix local.rebar --force
+script: make travis
+env:
+  - MIX_ENV=test
+before_script: make travis-init
