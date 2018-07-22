@@ -13,7 +13,7 @@ install:
 script: make travis
 env:
   - MIX_ENV=test
-	- MIX_ENV=dev
-	- MIX_ENV=staging
-	- MIX_ENV=prod
+  - MIX_ENV=dev
+  - MIX_ENV=staging
+  - MIX_ENV=prod
 before_script: make travis-init
