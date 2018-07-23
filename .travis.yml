@@ -1,33 +1,27 @@
 language: elixir
 elixir:
-  - 1.6
+- 1.6
 otp_release:
-  - 21.0
+- 21.0
 branches:
   only:
-    - master
+  - master
 install:
-  - epmd -daemon
-  - mix local.hex --force
-  - mix local.rebar --force
+- epmd -daemon
+- mix local.hex --force
+- mix local.rebar --force
 script: make travis
 env:
-  - MIX_ENV=test
+- MIX_ENV=test
 before_script: make travis-init
 before_deploy: make travis-deploy
 deploy:
   - provider: releases
     skip_cleanup: true
     api_key:
-      secure:
+      secure: vEKLlWmj+ke944iktfzRRCyqHZhLVbtlJdEihkR8qy4hnFd7B1aAI/t1iNxyZGTkRP7/1a76Iy2Saf4dmwUp3HNJMHN0VJ/22JhbwL3n23fNQIuni50XWRhQUXRFQmOxmVPmjhkznSXoF2TbeSu4m56XqILny69KMaVJiNL2qpkXDWq/kf4z3majt71ZUC7xSzNSNTZQ2xc1q/9yLqQoMgbo8XTPNDLy5bHqAQm8Giz4sgZqAyOOJSVycjnSKIrPv6BIFlTDE4J2ZyyR4boW+rj018TVQQ182AsXoBDBuk19kKjSeawK8uRteFF6BnLv9jufbK7/2QGRfbc0mOMgvZjjZiSyltGVaJOcvb+WVIhuNaFXo2wZBR/63MgWZQhNO/IZseOWDmrKMUySJDZfSCpGCkweX5FaeRTlhXPyqTfEraYcnsn5CKNpYopvX/W8aUiM4ZOXI1dYEKUW7XsSqahAa4/mQFnL0zFf75MZqDUKGIDGk/bSwZge/nVXYJYjbssqMp+G8f0wyTygwV1VVbn5W7N5VvbGkVIwR/RqYnvNBwyF0vlBreRxiFwTsxy6jh4Sk3O3GClzbcZ5K6Mh4VJDurGvkbqzljX77HTs0t/YIIa2vsX9BpOFRT/EmJU/OwmSRL6dsgHHiJN3gZFR7L9Y9IRD5VGTs0+DyThGhkk=
     file_glob: true
     file: _build/releases/*
     on:
       repo: ArcBlock/arc-ocap-service
       branch: master
-env:
-  global:
-  - secure: "YxnZLBfxlRrX7lrNWWqH/Pk5gnR0h6gt3dkrkBlSiinYJCiISTN/viIKpai4+kKUrVIYPx2rqzIoCx/o4w6GeIvJY5Fr0k39gKi+5yQWnv0E5KdYHtq5uXe2+mtTnjIhMChNZbyn0t/KjjH8ds3QVN+6sbg01efMsjy4vNBkxP5kmCmKuCPcObF9y4g9mueCgEDoZhUdHMlo7mcGIGj47rj40VCHSgw/UkIlskYXi2Vz2nF5iEEABJ90bSe4ZM3W89Zg3sAaMz7zajdTIHxw3ibxoFv24pU1a9elAUD7TH/BaMrawKUUVSISGW+R9dE5yGG712FSyTkEs//DfnVCmXTzvOFw0HA5TUku/wcA3KULPEodrFutjpeoakSLLgVRr/SP/Avs5ZrVLv7BZXHUr+Xz5UcySt6hYdqLHxpiRjDeQ6jyU9yP7z6uSEk2YQpgFzG5ep1Bqs4z4qHI6v1jBMvPXgUmRm4vg9eVsBmLqnb6wiP3gwf6smK+MLjBhf+W9vK477DpjLAn5Hb0ZILIRuau3l6Nw5cdldeHLOwfkveq49ZLHA56q05mL0UllQgUoCEcHS4x+kfuE0EFn4PCxMjtmAC1HuFERkXz9KNioY24B65eEQYqirYNYO/Z1OxUuMVKoSk4MtJ73s+SUCWyvs5vZCxce2ew95tY09uQ00I="
-notifications:
-  slack:
-    secure:
