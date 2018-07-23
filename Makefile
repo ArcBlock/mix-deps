@@ -45,8 +45,10 @@ precommit: dep build
 
 travis: precommit
 
-travis-deploy: release
+travis-deploy:
 	@echo "Deploy the software by travis"
+	@make build-release
+	@make release
 
 clean:
 	@echo "Cleaning the build..."
