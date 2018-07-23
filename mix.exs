@@ -21,6 +21,15 @@ defmodule MixDeps.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      # phoenix related dependencies
+      {:phoenix, github: "phoenixframework/phoenix", override: true},
+      {:phoenix_pubsub, "~> 1.0"},
+      {:phoenix_ecto, "~> 3.2"},
+      {:postgrex, ">= 0.0.0"},
+      {:phoenix_html, "~> 2.11"},
+      {:phoenix_live_reload, "~> 1.0", only: :dev},
+      {:gettext, "~> 0.11"},
+
       # Normal depedencies
       {:absinthe, "~> 1.4.0"},
       {:absinthe_plug, "~> 1.4.0"},
