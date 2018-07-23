@@ -32,6 +32,7 @@ defmodule MixDeps.MixProject do
 
       # Normal depedencies
       {:absinthe, "~> 1.4.0"},
+      {:absinthe_phoenix, "~> 1.4.0"},
       {:absinthe_plug, "~> 1.4.0"},
       {:bamboo, "~> 1.0"},
       {:bamboo_smtp, "~> 1.5.0"},
@@ -44,7 +45,6 @@ defmodule MixDeps.MixProject do
       {:jason, "~> 1.0"},
       {:plug, "~> 1.6.0"},
       {:proper_case, "~> 1.2.0"},
-      {:postgrex, ">= 0.0.0"},
       {:recase, "~> 0.3.0"},
       {:sentry, "~> 6.4"},
       {:utility_belt, "> 0.0.0"},
