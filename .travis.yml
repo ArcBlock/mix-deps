@@ -23,5 +23,5 @@ deploy:
     file_glob: true
     file: _build/releases/*
     on:
-      repo: ArcBlock/arc-ocap-service
+      repo: tyrchen/mix-deps
       branch: master
