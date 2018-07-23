@@ -6,15 +6,11 @@ RELEASE_BODY=release on branch __$(GIT_BRANCH)__\n\n$(GIT_LOG)
 RELEASE_DATA='{"tag_name": "$(RELEASE_VERSION)", "name": "$(RELEASE_VERSION)", "target_commitish": "master", "body": "$(RELEASE_BODY)"}'
 RELEASE_URL=https://api.github.com/repos/tyrchen/mix-deps/releases
 
-release: all
-ifeq ($(GITHUB_TOKEN),)
-	@echo "To generate a release, you need to define 'GITHUB_TOKEN' in your env."
-else
-	@echo "Create a release on $(RELEASE_VERSION)"
+release:
+	@git config --local user.name "Tyr Chen"
+	@git config --local user.email "tyr.chen@gmail.com"
 	@git tag -a $(RELEASE_VERSION) -m "Release $(RELEASE_VERSION). Revision is: $(GIT_VERSION)" | true
 	@git push origin $(RELEASE_VERSION) | true
-	curl -s -d $(RELEASE_DATA) "$(RELEASE_URL)?access_token=$(GITHUB_TOKEN)"
-endif
 
 delete-release:
 	@echo "Delete a release on $(RELEASE_VERSION)"

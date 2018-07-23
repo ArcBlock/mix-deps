@@ -38,6 +38,7 @@ defmodule MixDeps.MixProject do
       {:postgrex, ">= 0.0.0"},
       {:recase, "~> 0.3.0"},
       {:sentry, "~> 6.4"},
+      {:utility_belt, "> 0.0.0"},
 
       # joken related
       {:joken, "~> 1.1"},
@@ -59,7 +60,7 @@ defmodule MixDeps.MixProject do
       {:dialyxir, "~> 0.5", only: [:dev], runtime: false},
       {:ex_doc, "~> 0.18", only: [:dev, :test]},
       {:excheck, "~> 0.5", only: :test},
-      {:pre_commit_hook, "~> 1.2", only: [:dev]},
+      {:pre_commit_hook, "~> 1.2", only: [:dev, :test]},
       {:triq, github: "triqng/triq", only: :test},
 
       # test only
