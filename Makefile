@@ -58,6 +58,10 @@ run:
 	@echo "Running the software..."
 	@iex -S mix
 
+rebuild-deps:
+	@rm -rf mix.lock;
+	@make dep
+
 include .makefiles/*.mk
 
 .PHONY: build init travis-init install dep pre-build post-build all test doc precommit travis clean watch run bump-version create-pr

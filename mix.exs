@@ -1,11 +1,19 @@
 defmodule MixDeps.MixProject do
   use Mix.Project
 
+  @version File.cwd!() |> Path.join("version") |> File.read!() |> String.trim()
+  @elixir_version File.cwd!() |> Path.join(".elixir_version") |> File.read!() |> String.trim()
+  @otp_version File.cwd!() |> Path.join(".otp_version") |> File.read!() |> String.trim()
+
+  def get_version, do: @version
+  def get_elixir_version, do: @elixir_version
+  def get_otp_version, do: @otp_version
+
   def project do
     [
       app: :mix_deps,
-      version: "0.1.0",
-      elixir: "~> 1.6",
+      version: @version,
+      elixir: @elixir_version,
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
