@@ -39,6 +39,7 @@ defmodule MixDeps.MixProject do
       {:gettext, "~> 0.11"},
 
       # Normal depedencies
+      {:atomic_map, "~> 0.9.3"},
       {:absinthe, "~> 1.4.0"},
       {:absinthe_phoenix, "~> 1.4.0"},
       {:absinthe_plug, "~> 1.4.0"},
@@ -49,13 +50,17 @@ defmodule MixDeps.MixProject do
       {:cipher, "~> 1.4.0"},
       {:ecto, "~> 2.1"},
       {:ex_datadog_plug, "~> 0.5.0"},
+      {:hexate, "~> 0.6.1"},
+      {:hackney, "~> 1.13.0", override: true},
       {:kronky, "~> 0.5.0"},
+      {:httpoison, "~> 0.13.0"},
       {:jason, "~> 1.0"},
       {:plug, "~> 1.6.0"},
       {:proper_case, "~> 1.2.0"},
       {:recase, "~> 0.3.0"},
       {:sentry, "~> 6.4"},
       {:utility_belt, "> 0.0.0"},
+      {:yaml_elixir, "~> 2.0.2"},
 
       # joken related
       {:joken, "~> 1.1"},
@@ -75,7 +80,7 @@ defmodule MixDeps.MixProject do
       {:benchee, "~> 0.13.0", only: [:dev, :test]},
       {:credo, "~> 0.8", only: [:dev, :test]},
       {:dialyxir, "~> 0.5", only: [:dev], runtime: false},
-      {:ex_doc, "~> 0.18", only: [:dev, :test]},
+      {:ex_doc, "~> 0.18.0", only: [:dev, :test]},
       {:excheck, "~> 0.5", only: :test},
       {:pre_commit_hook, "~> 1.2", only: [:dev, :test]},
       {:triq, github: "triqng/triq", only: :test},
