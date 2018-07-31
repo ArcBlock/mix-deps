@@ -30,7 +30,7 @@ defmodule MixDeps.MixProject do
   defp deps do
     [
       # phoenix related dependencies
-      {:phoenix, github: "phoenixframework/phoenix", override: true},
+      {:phoenix, github: "tyrchen/phoenix", override: true},
       {:phoenix_pubsub, "~> 1.0"},
       {:phoenix_ecto, "~> 3.2"},
       {:postgrex, ">= 0.0.0"},
