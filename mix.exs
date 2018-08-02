@@ -52,7 +52,7 @@ defmodule MixDeps.MixProject do
       {:ex_datadog_plug, "~> 0.5.0"},
       {:hackney, "~> 1.13.0", override: true},
       {:hexate, "~> 0.6.1"},
-      {:httpoison, "~> 0.13.0"},
+      {:httpoison, "~> 1.0"},
       {:kronky, "~> 0.5.0"},
       {:jason, "~> 1.0"},
       {:plug, "~> 1.6.0"},
