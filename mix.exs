@@ -29,6 +29,11 @@ defmodule MixDeps.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      # aws related
+      {:ex_aws, "~> 2.0"},
+      {:ex_aws_s3, "~> 2.0"},
+      {:ex_aws_kinesis, "~> 2.0"},
+
       # phoenix related dependencies
       {:phoenix, github: "tyrchen/phoenix", override: true},
       {:phoenix_pubsub, "~> 1.0"},
