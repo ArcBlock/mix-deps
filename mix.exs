@@ -35,7 +35,7 @@ defmodule MixDeps.MixProject do
       {:ex_aws_kinesis, "~> 2.0"},
 
       # phoenix related dependencies
-      {:phoenix, github: "tyrchen/phoenix", override: true},
+      {:phoenix, github: "phoenixframework/phoenix", override: true},
       {:phoenix_pubsub, "~> 1.0"},
       {:phoenix_ecto, "~> 3.2"},
       {:postgrex, ">= 0.0.0"},
@@ -63,7 +63,7 @@ defmodule MixDeps.MixProject do
       {:plug, "~> 1.6.0"},
       {:pot, "~> 0.9.7"},
       {:proper_case, "~> 1.2.0"},
-      {:quantum, "~> 2.2"},
+      {:quantum, "~> 2.2.7"},
       {:recase, "~> 0.3.0"},
       {:timex, "~> 3.0"},
       {:sentry, "~> 6.4"},
