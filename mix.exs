@@ -72,8 +72,6 @@ defmodule MixDeps.MixProject do
 
       # joken related
       {:joken, "~> 1.1"},
-      {:libsodium, "> 0.0.0"},
-      {:keccakf1600, "> 0.0.0"},
 
       # utility tools for error logs and metrics
       {:statix, ">= 0.0.0"},
