@@ -3,9 +3,13 @@ RELEASE_DIR=$(TOP_DIR)/_build/releases
 
 build-all:
 	@echo "Building all dependencies..."
-	@mix deps.get; MIX_ENV=prod mix compile; MIX_ENV=staging mix compile; MIX_ENV=dev mix compile; MIX_ENV=test mix compile;
-	@tar zcvf deps.tgz deps/
-	@tar zcvf builds.tgz _build/
+	@mix deps.get;
+	@echo "Building dependencies for MIX_ENV=prod..."; MIX_ENV=prod mix compile
+	@echo "Building dependencies for MIX_ENV=staging..."; MIX_ENV=staging mix compile
+	@echo "Building dependencies for MIX_ENV=dev..."; MIX_ENV=dev mix compile
+	@echo "Building dependencies for MIX_ENV=test..."; MIX_ENV=test mix compile
+	@tar zcf deps.tgz deps/
+	@tar zcf builds.tgz _build/
 	@mv *.tgz $(RELEASE_DIR)
 
 build-version-file:

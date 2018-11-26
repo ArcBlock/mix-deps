@@ -11,7 +11,7 @@ init: install dep
 	@echo "Initializing the repo..."
 	@git submodule update --init --recursive
 
-travis-init:
+travis-init: extract-deps
 	@echo "Initialize software required for travis (normally ubuntu software)"
 
 install:
