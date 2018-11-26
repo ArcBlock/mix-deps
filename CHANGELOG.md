@@ -1,3 +1,6 @@
+## 0.5.1 (November 26, 2018)
+  - Add dep.mk; tweak on outputs
+
 ## 0.5.0 (November 26, 2018)
   - Update deps version
 
