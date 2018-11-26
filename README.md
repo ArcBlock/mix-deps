@@ -1,21 +1,27 @@
 # MixDeps
 
-**TODO: Add description**
+Least common multiple for Elixir dependencies.
 
-## Installation
+## Usage
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `mix_deps` to your list of dependencies in `mix.exs`:
+Add `.makefiles/dep.mk` to repo
 
-```elixir
-def deps do
-  [
-    {:mix_deps, "~> 0.1.0"}
-  ]
-end
+```Makefile
+SRC=.
+DEPS_VER=vx.x.x
+DEPS_PREFIX=https://github.com/ArcBlock/mix-deps/releases/download
+BUILDS_FILE=builds.tgz
+DEPS_FILE=deps.tgz
+BUILDS_URL=$(DEPS_PREFIX)/$(DEPS_VER)/$(BUILDS_FILE)
+DEPS_URL=$(DEPS_PREFIX)/$(DEPS_VER)/$(DEPS_FILE)
+
+extract-deps:
+	@cd $(SRC); wget $(BUILDS_URL) --quiet; wget $(DEPS_URL) --quiet; tar zxf $(BUILDS_FILE); tar zxf $(DEPS_FILE); rm $(BUILDS_FILE) $(DEPS_FILE);
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/mix_deps](https://hexdocs.pm/mix_deps).
+Then update `Makefile`
 
+```Makefile
+travis-init: extract-deps
+	@echo "Initialize software required for travis (normally ubuntu software)"
+```
