@@ -1,3 +1,6 @@
+## 0.6.0 (November 26, 2018)
+  - Update dep version; tweak elixir.mk
+
 ## 0.5.3 (November 26, 2018)
   - Fix duplicate versions
 

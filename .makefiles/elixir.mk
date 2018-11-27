@@ -8,7 +8,6 @@ build-all:
 	@echo "Building dependencies for MIX_ENV=staging..."; MIX_ENV=staging mix compile
 	@echo "Building dependencies for MIX_ENV=dev..."; MIX_ENV=dev mix compile
 	@echo "Building dependencies for MIX_ENV=test..."; MIX_ENV=test mix compile
-	@rm $(RELEASE_DIR)/v*
 	@tar zcf deps.tgz deps/
 	@tar zcf builds.tgz _build/
 	@mv *.tgz $(RELEASE_DIR)
