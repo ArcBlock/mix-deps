@@ -1,3 +1,6 @@
+## 0.5.3 (November 26, 2018)
+  - Fix duplicate versions
+
 ## 0.5.2 (November 26, 2018)
   - Fix extra versions file in assets
   - Remove dead code
