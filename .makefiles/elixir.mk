@@ -10,6 +10,7 @@ build-all:
 	@echo "Building dependencies for MIX_ENV=test..."; MIX_ENV=test mix compile
 	@tar zcf deps.tgz deps/
 	@tar zcf builds.tgz _build/
+	@rm $(RELEASE_DIR)/v*
 	@mv *.tgz $(RELEASE_DIR)
 
 build-version-file:
@@ -18,4 +19,4 @@ build-version-file:
 $(RELEASE_DIR):
 	@mkdir -p $@
 
-build-release: $(RELEASE_DIR) build-version-file build-all
+build-release: $(RELEASE_DIR) build-all build-version-file
