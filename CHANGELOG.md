@@ -1,3 +1,7 @@
+## 0.5.2 (November 26, 2018)
+  - Fix extra versions file in assets
+  - Remove dead code
+
 ## 0.5.1 (November 26, 2018)
   - Add dep.mk; tweak on outputs
 
