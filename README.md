@@ -1,6 +1,6 @@
 # MixDeps
 
-Least common multiple for Elixir dependencies.
+Least common multiple for Elixir dependencies for Travis ci.
 
 ## Usage
 
