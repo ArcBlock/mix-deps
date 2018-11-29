@@ -1,10 +1,10 @@
 # MixDeps
 
-Least common multiple for Elixir dependencies.
+Least common multiple for Elixir dependencies for Travis ci.
 
 ## Usage
 
-Add `.makefiles/dep.mk` to repo
+Add `.makefiles/dep.mk` to repo, remember to change the `DEPS_VER` to desired version number.
 
 ```Makefile
 SRC=.
@@ -16,6 +16,7 @@ BUILDS_URL=$(DEPS_PREFIX)/$(DEPS_VER)/$(BUILDS_FILE)
 DEPS_URL=$(DEPS_PREFIX)/$(DEPS_VER)/$(DEPS_FILE)
 
 extract-deps:
+	@echo "Extracting deps from mix-deps repo $(DEPS_VER)..."
 	@cd $(SRC); wget $(BUILDS_URL) --quiet; wget $(DEPS_URL) --quiet; tar zxf $(BUILDS_FILE); tar zxf $(DEPS_FILE); rm $(BUILDS_FILE) $(DEPS_FILE);
 ```
 

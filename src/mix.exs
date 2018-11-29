@@ -1,13 +1,8 @@
 defmodule MixDeps.MixProject do
   use Mix.Project
 
-  @version File.cwd!() |> Path.join("version") |> File.read!() |> String.trim()
+  @version File.cwd!() |> Path.join("../version") |> File.read!() |> String.trim()
   @elixir_version File.cwd!() |> Path.join(".elixir_version") |> File.read!() |> String.trim()
-  @otp_version File.cwd!() |> Path.join(".otp_version") |> File.read!() |> String.trim()
-
-  def get_version, do: @version
-  def get_elixir_version, do: @elixir_version
-  def get_otp_version, do: @otp_version
 
   def project do
     [
@@ -70,6 +65,7 @@ defmodule MixDeps.MixProject do
       {:kronky, "~> 0.5.0"},
       {:not_qwerty123, "~> 2.3"},
       {:plug, "~> 1.7"},
+      {:plug_cowboy, "~> 2.0"},
       {:pot, "~> 0.9.7"},
       {:proper_case, "~> 1.2.0"},
       {:quantum, "~> 2.2.7"},
@@ -86,13 +82,13 @@ defmodule MixDeps.MixProject do
       {:recon_ex, "~> 0.9.1"},
 
       # deployment
-      {:distillery, "~> 2.0", runtime: false},
+      {:distillery, "~> 2.0"},
 
       # dev & test
       {:benchee, "~> 0.13.0", only: [:dev, :test]},
       {:coveralls, "~> 1.5", only: :test},
       {:credo, "~> 1.0", only: [:dev, :test]},
-      {:dialyxir, "~> 0.5", only: [:dev], runtime: false},
+      {:dialyxir, "~> 0.5", only: :dev},
       {:ex_doc, "~> 0.19", only: [:dev, :test]},
       {:ex_machina, "~> 2.2", only: [:dev, :test]},
       {:excheck, "~> 0.5", only: :test},

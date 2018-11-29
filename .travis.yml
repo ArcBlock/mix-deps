@@ -7,13 +7,10 @@ branches:
   only:
     - master
 install:
-  - epmd -daemon
   - mix local.hex --force
   - mix local.rebar --force
-script: make travis
-env:
-  - MIX_ENV=test
 before_script: make travis-init
+script: make travis
 before_deploy: make travis-deploy
 deploy:
   - provider: releases
@@ -21,7 +18,7 @@ deploy:
     api_key:
       secure: vEKLlWmj+ke944iktfzRRCyqHZhLVbtlJdEihkR8qy4hnFd7B1aAI/t1iNxyZGTkRP7/1a76Iy2Saf4dmwUp3HNJMHN0VJ/22JhbwL3n23fNQIuni50XWRhQUXRFQmOxmVPmjhkznSXoF2TbeSu4m56XqILny69KMaVJiNL2qpkXDWq/kf4z3majt71ZUC7xSzNSNTZQ2xc1q/9yLqQoMgbo8XTPNDLy5bHqAQm8Giz4sgZqAyOOJSVycjnSKIrPv6BIFlTDE4J2ZyyR4boW+rj018TVQQ182AsXoBDBuk19kKjSeawK8uRteFF6BnLv9jufbK7/2QGRfbc0mOMgvZjjZiSyltGVaJOcvb+WVIhuNaFXo2wZBR/63MgWZQhNO/IZseOWDmrKMUySJDZfSCpGCkweX5FaeRTlhXPyqTfEraYcnsn5CKNpYopvX/W8aUiM4ZOXI1dYEKUW7XsSqahAa4/mQFnL0zFf75MZqDUKGIDGk/bSwZge/nVXYJYjbssqMp+G8f0wyTygwV1VVbn5W7N5VvbGkVIwR/RqYnvNBwyF0vlBreRxiFwTsxy6jh4Sk3O3GClzbcZ5K6Mh4VJDurGvkbqzljX77HTs0t/YIIa2vsX9BpOFRT/EmJU/OwmSRL6dsgHHiJN3gZFR7L9Y9IRD5VGTs0+DyThGhkk=
     file_glob: true
-    file: _build/releases/*
+    file: src/_build/releases/*
     on:
       repo: ArcBlock/mix-deps
       branch: master

@@ -20,7 +20,7 @@ bump-version:
 create-pr:
 	@echo "Creating pull request..."
 	@make bump-version || true
-	@git add .;git commit -a -m "bump version";git push origin $(GIT_BRANCH)
+	@git add CHANGELOG.md version;git commit -m "bump version";git push origin $(GIT_BRANCH)
 	@hub pull-request
 
 browse-pr:
