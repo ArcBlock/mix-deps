@@ -1,3 +1,8 @@
+## 0.7.0 (November 29, 2018)
+  - refactor files
+  - remove unnecessary files
+  - Update folder structure; add dep plug_cowboy
+
 ## 0.6.0 (November 26, 2018)
   - Update dep version; tweak elixir.mk
 
