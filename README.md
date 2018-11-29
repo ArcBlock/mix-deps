@@ -26,3 +26,10 @@ Then update `Makefile`
 travis-init: extract-deps
 	@echo "Initialize software required for travis (normally ubuntu software)"
 ```
+
+## How to update
+
+To update this repo
+
+1. Update `DEPS_VER` in `.makefiles/dep.mk` to last release version of this repo itself for incremental build
+2. Update `deps` in `mix.exs`, then `$ make dep`
