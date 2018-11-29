@@ -1,6 +1,6 @@
 #!/bin/sh
 
-mix test_all
+cd src; mix test_all
 RES=$?
 if [ $RES -ne 0  ]
 then

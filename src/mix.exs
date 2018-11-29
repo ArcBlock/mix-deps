@@ -70,6 +70,7 @@ defmodule MixDeps.MixProject do
       {:kronky, "~> 0.5.0"},
       {:not_qwerty123, "~> 2.3"},
       {:plug, "~> 1.7"},
+      {:plug_cowboy, "~> 2.0"},
       {:pot, "~> 0.9.7"},
       {:proper_case, "~> 1.2.0"},
       {:quantum, "~> 2.2.7"},
