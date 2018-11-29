@@ -1,3 +1,6 @@
+## 0.7.1 (November 29, 2018)
+  - Tweak readme
+
 ## 0.7.0 (November 29, 2018)
   - refactor files
   - remove unnecessary files
