@@ -13,9 +13,9 @@ build-all:
 	@cd $(SRC); MIX_ENV=dev mix compile
 	@echo "Building dependencies for MIX_ENV=test..."
 	@cd $(SRC); MIX_ENV=test mix compile
-	@tar zcf deps.tgz $(SRC)/deps/
-	@tar zcf builds.tgz $(SRC)/_build/
-	@mv *.tgz $(RELEASE_DIR)
+	@cd $(SRC); tar zcf builds.tgz _build/
+	@cd $(SRC); tar zcf deps.tgz deps/
+	@mv $(SRC)/*.tgz $(RELEASE_DIR)
 
 build-version-file:
 	@echo "$(BUILD_VERSION)" > $(RELEASE_DIR)/$(BUILD_VERSION)
