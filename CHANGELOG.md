@@ -1,5 +1,8 @@
-## 0.8.0 (November 29, 2018)
+## 0.8.1 (November 29, 2018)
+  - Tweak readme
 
+## 0.8.0 (November 29, 2018)
+  - Fix tgz path
 
 ## 0.7.1 (November 29, 2018)
   - Tweak readme

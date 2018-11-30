@@ -4,10 +4,13 @@ Least common multiple for Elixir dependencies for Travis ci.
 
 ## Usage
 
-Add `.makefiles/dep.mk` to repo, remember to change the `DEPS_VER` to desired version number.
+Add `.makefiles/dep.mk` to repo, remember to change
+
+- `SRC` to elixir src path, normally it's `src`.
+- `DEPS_VER` to desired version number.
 
 ```Makefile
-SRC=.
+SRC=src
 DEPS_VER=vx.x.x
 DEPS_PREFIX=https://github.com/ArcBlock/mix-deps/releases/download
 BUILDS_FILE=builds.tgz
