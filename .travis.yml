@@ -10,6 +10,8 @@ branches:
 install:
   - mix local.hex --force
   - mix local.rebar --force
+env:
+  - MIX_ENV=test
 before_script: make travis-init
 script: make travis
 before_deploy: make travis-deploy
