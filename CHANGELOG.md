@@ -1,3 +1,6 @@
+## 0.8.2 (November 30, 2018)
+  - Tweak makefile
+
 ## 0.8.1 (November 29, 2018)
   - Tweak readme
 
