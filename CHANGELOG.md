@@ -1,3 +1,7 @@
+## 0.8.3 (November 30, 2018)
+  - Clean up makefiles
+  - Travis use MIX_ENV=test
+
 ## 0.8.2 (November 30, 2018)
   - Tweak makefile
 
