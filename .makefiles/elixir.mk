@@ -1,4 +1,4 @@
-SRC=$(TOP_DIR)/src
+SRC=src
 BUILD_VERSION=v$(VERSION)
 RELEASE_DIR=$(SRC)/_build/releases
 

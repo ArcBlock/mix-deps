@@ -25,4 +25,3 @@ deploy:
     on:
       repo: ArcBlock/mix-deps
       branch: master
-      tags: true
